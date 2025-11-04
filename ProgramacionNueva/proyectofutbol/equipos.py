@@ -64,7 +64,7 @@ def buscar_equipo_por_id(lista_equipos):
                return f"Artículo encontrado: {i}"
      return "No se encontro un artículo por ese id"
 
-def eliminar_equipo(lista_equipos)
+def eliminar_equipo(lista_equipos):
      id_busqueda = int(input("Introduce el id del equipo que quieras eliminar: "))
      for i in range(len(lista_equipos)):
           if lista_equipos[i]["id"] == id_busqueda:
