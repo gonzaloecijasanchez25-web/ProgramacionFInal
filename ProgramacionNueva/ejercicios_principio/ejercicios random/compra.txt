@@ -1,0 +1,41 @@
+# Ejercicio 5: Menú de cafetería
+
+# Definir el menú: cada clave es el producto, el valor es una tupla (precio, calorías)
+menu = {
+    "Café": (1.5, 50),
+    "Té": (1.0, 0),
+    "Bocadillo": (3.0, 300),
+    "Ensalada": (2.5, 150)
+}
+
+# Mostrar el menú
+print("Menú:")
+for producto, (precio, calorias) in menu.items():
+    print(f"- {producto}: {precio}€ ({calorias} cal)")
+
+# Lista para guardar el pedido
+pedido = []
+
+# Pedir productos al usuario
+while True:
+    eleccion = input("\nIngresa el nombre del producto que deseas agregar (o 'fin' para terminar): ")
+    if eleccion.lower() == "fin":
+        break
+    elif eleccion in menu:
+        pedido.append(eleccion)
+        print(f"{eleccion} agregado a tu pedido.")
+    else:
+        print("Producto no válido, elige uno del menú.")
+
+# Mostrar el pedido
+print("\nTu pedido:")
+for producto in pedido:
+    print(f"- {producto}")
+
+# Calcular total y calorías
+total = sum(menu[producto][0] for producto in pedido)
+calorias_totales = sum(menu[producto][1] for producto in pedido)
+
+print(f"\nTotal a pagar: {total}€")
+print(f"Calorías totales: {calorias_totales} cal")
+

@@ -1,0 +1,20 @@
+numero = 0
+seguir = 0
+
+def es_primo(numero):
+    numero = int(numero)
+    if numero < 2:
+        return False
+    for i in range(2, numero):
+        if numero % i == 0:
+            return False
+    return True
+
+while seguir == 0:
+    numero = input("Introduce un número para comprobar si es primo (o fin para acabar): ")
+    if numero == "fin":
+        print("Saliendo del programa")
+        seguir += 1
+    else:
+        print(f"El número es primo: {es_primo(numero)}")
+

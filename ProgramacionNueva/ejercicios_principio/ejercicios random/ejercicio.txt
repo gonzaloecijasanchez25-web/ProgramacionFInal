@@ -1,0 +1,7 @@
+edad = int(input("Introduce tu edad: "))
+if 18 <= edad < 80:
+    print("Puedes tener carnet")
+elif edad >= 80:
+    print("Que tus hijos se hagan chofer")
+else:
+    print("No puedes aun")

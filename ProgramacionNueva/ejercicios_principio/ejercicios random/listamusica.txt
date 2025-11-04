@@ -1,0 +1,19 @@
+lista_musica = []
+
+while True:
+	cancion = input("Introduce la cancion, o fin para acabar: ")
+	if cancion == "fin":
+		break
+	lista_musica.append(cancion)
+
+print("\nTu playlist es:")
+for i in range(len(lista_musica)):
+    print(f"{i + 1}. {lista_musica[i]}") 
+
+opcion = int(input("\nIngresa el número de la canción que quieres reproducir: "))
+
+# Comprobar que sea válido
+if 1 <= opcion <= len(lista_musica):
+    print(f'Reproduciendo "{lista_musica[opcion - 1]}"...')
+else:
+    print("Número no válido")

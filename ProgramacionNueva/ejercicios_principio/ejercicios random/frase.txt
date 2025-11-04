@@ -1,0 +1,3 @@
+frase = "exotico "
+repetida = frase * 10000
+print(repetida)

@@ -1,0 +1,7 @@
+frase = "Exotico es la mejor palabra"
+print(frase)
+
+longitud = len(frase)
+
+print(frase[1])
+print("La cadena tiene una longitud de; ", longitud)

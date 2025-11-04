@@ -1,0 +1,19 @@
+seguir = 0
+numero_nuevo = 0
+numeros = []
+def contar_pares(numeros):
+    contador = 0
+    for numero in numeros:
+        if numero % 2 == 0:
+            contador += 1
+    return contador
+  
+while seguir == 0:
+    numero_nuevo = input("introduzca un numero a la lista, o fin para acabar")
+    if numero_nuevo == "fin":
+        seguir += 1
+    else:
+        numeros.append(int(numero_nuevo))
+        # int sacado de chatgpt, me daba error y no sabia el porque 
+
+print(f"El numero total de pares que has introducido es: {contar_pares(numeros)}")

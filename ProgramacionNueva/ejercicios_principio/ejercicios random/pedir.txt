@@ -1,0 +1,11 @@
+base = float(input("Introduce la base del triángulo: "))
+altura = float(input("Introduce la altura del triángulo: "))
+
+area = (base * altura)/2
+print("el área es: ", area)
+
+base2 = float(input("Introduce la base del triángulo: "))
+altura2 = float(input("Introduce la altura del triángulo: "))
+
+areatriangulo = (base2 * altura2)/2
+print("el área es: ", areatriangulo)

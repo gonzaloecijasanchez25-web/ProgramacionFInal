@@ -1,0 +1,19 @@
+diccionario = {}
+
+while True:
+	nombre = input("Introduce el nombre del contacto(fin para acabar): ")
+	if nombre == "fin":
+		break	
+	
+	telefono = input(f"Introduce el numero de telefono de {nombre}: ")
+	diccionario[nombre] = telefono
+
+print("\nLista de contactos:")
+for nombre, telefono in diccionario.items():
+	print(f"{nombre}: {telefono}")
+
+buscar =input("Introduce el nombre del numero que quieras saber: ")
+if buscar in diccionario:
+	print(f"El numero de {buscar} es: {diccionario[buscar]}")
+else:
+	print(f"No se encontró el contacto {buscar}.")

@@ -1,0 +1,12 @@
+itinerario = ("Madrid", "Barcelona", "Valencia", "Sevilla")
+
+print("Itinerario de viaje: ")
+for i, ciudad in enumerate(itinerario, start=1):
+	print(f"{i}, {ciudad}")
+
+posicion = int(input("Ingresa la posición para saber qué ciudad visitarás: "))
+
+if 1 <= posicion <= len(itinerario):
+	print(f"En la posicion {posicion} visitaras: {itinerario[posicion-1]}")
+else:
+	print("Posicion inválida. Elige un número dentro del itinerario.")

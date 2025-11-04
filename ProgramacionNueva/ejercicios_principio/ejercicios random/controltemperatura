@@ -1,0 +1,26 @@
+semana = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
+temperaturas = []
+suma = 0
+dias_25 = 0
+dia_max = ""
+temperatura_max = 0
+media = 0
+
+for dia in semana:
+    temp = float(input(f"Introduce la temperatura de {dia}"))
+    temperaturas.append(temp)
+    suma += temp
+
+    if temp >25:
+        dias_25 += 1
+
+    if temp > temperatura_max:
+        temperatura_max = temp
+        dia_max = dia
+
+media = suma / len(semana)
+print("/n Resultados:")
+print(f"La temperatura media de la semana fue: {media}")
+print(f"Hubo {dias_25} que superaron los 25º")
+print(f"El dia con la temperatura mas alta: {dia_max}")
+

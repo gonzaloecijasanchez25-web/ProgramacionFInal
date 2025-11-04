@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Estudiantes</title>
+</head>
+<body>
+
+  <h1>Formulario de Registro</h1>
+
+  <form action="registro.php" method="post">
+
+    <h2>Datos Personales</h2>
+
+    <label>Nombre completo:</label><br>
+    <input type="text" name="nombre"><br><br>
+
+    <label>Correo electrónico:</label><br>
+    <input type="email" name="email"><br><br>
+
+    <label>Teléfono:</label><br>
+    <input type="tel" name="telefono"><br><br>
+
+    <label>Fecha de nacimiento:</label><br>
+    <input type="date" name="fecha"><br><br>
+
+    <label>Género: <br>
+    <input type="radio" name="genero" value="Masculino"> Masculino<br>
+    <input type="radio" name="genero" value="Femenino"> Femenino<br>
+    <input type="radio" name="genero" value="Otro"> Otro<br>
+    </label>
+
+    <h2>Información Académica</h2>
+
+    <label>Curso de interés:</label><br>
+    <select name="curso">
+      <option value="">Selecciona un curso</option>
+      <option value="DAW">DAW</option>
+      <option value="DAM">DAM</option>
+    </select><br><br>
+
+    <label>Nivel de experiencia</label><br>
+    <select name="experiencia">
+    <input type="checkbox" name="experiencia" value="Principiante"> Principiante<br>
+    <input type="checkbox" name="experiencia" value="Intermedio"> Intermedio<br>
+    <input type="checkbox" name="experiencia" value="Avanzado"> Avanzado<br>
+    </select><br><br>
+
+    <label>Tecnologías que te interesan:</label><br>
+    <input type="checkbox" name="tecnologias" value="HTML"> HTML<br>
+    <input type="checkbox" name="tecnologias" value="CSS"> CSS<br>
+    <input type="checkbox" name="tecnologias" value="JavaScript"> JavaScript<br>
+    <input type="checkbox" name="tecnologias" value="React"> React<br>
+    <input type="checkbox" name="tecnologias" value="Node.js"> Node.js<br><br>
+
+    <h2>Información Adicional</h2>
+
+    <label>¿Cómo conociste los cursos?</label><br>
+    <select name="origen">
+      <option value="">Selecciona una opción</option>
+      <option value="Google">Google</option>
+      <option value="Redes Sociales">Redes Sociales</option>
+      <option value="Amigos">Amigos</option>
+    </select><br><br>
+
+    <label>Comentarios:</label><br>
+    <textarea name="comentarios" rows="4" cols="40"></textarea><br><br>
+
+    <form action="procesar.php" method="POST" enctype="multipart/form-data">
+    <label for="archivo">Sube tu archivo:</label>
+    <input type="file" id="archivo" name="archivo">
+    <button type="submit">Enviar</button>
+    </form>
+
+    <input type="checkbox" name="terminos" value="acepto"> Acepto los términos<br><br>
+    <input type="checkbox" name="Informacion" value="acepto"> Deseo recibir informacion<br><br>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpiar">
+
+  </form>
+
+</body>
+</html>

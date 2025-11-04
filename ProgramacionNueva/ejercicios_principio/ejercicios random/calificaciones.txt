@@ -1,0 +1,25 @@
+calificaciones = {}
+
+while True:
+	asignatura = input("Introduce la asignatura: (o fin para acabar)")
+	if asignatura == "fin":
+		break
+
+	nota = float(input(f"Introduce la nota de {asignatura}: "))
+	calificaciones[asignatura] = nota
+
+
+print("Resumen de calificaciones")
+suma_notas = 0
+contador = 0
+
+for asignatura in calificaciones:
+	print(f"{asignatura}: {calificaciones[asignatura]}")
+	suma_notas = suma_notas + calificaciones[asignatura]
+	contador = contador + 1
+
+if contador > 0:
+	media = suma_notas / contador
+	print(f"La media es: {media}")
+else:
+	print("No se introdujeron asignaturas")
