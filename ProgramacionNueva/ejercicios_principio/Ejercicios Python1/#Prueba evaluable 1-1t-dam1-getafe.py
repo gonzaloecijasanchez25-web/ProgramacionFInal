@@ -57,10 +57,13 @@ while seguir == 0:
             case 3:
                 nomb_pedir = input("Introduce el nombre del que quieras saber su media: ")
                 if nomb_pedir in media_alumno:
+                    media = media_alumno[nomb_pedir]
                     if media >= 5:
-                        print(f"La media de {nombre} es {media}, estas aprobado enhorabuena!!")
+                        print(f"La media de {nomb_pedir} es {media}, estás aprobado ¡enhorabuena!")
                     else:
-                        print(f"La media de {nombre} es {media}, estas suspenso la proxima sera")
+                        print(f"La media de {nomb_pedir} es {media}, estás suspenso, la próxima será")
+                else:
+                    print("Ese alumno no existe en la lista.")
 
             case 4:
                 media_g = media_t / len(orden_registro)
