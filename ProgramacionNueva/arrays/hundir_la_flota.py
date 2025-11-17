@@ -22,6 +22,7 @@ def colocar_barcos(tablero):
                     colocado = True
     return tablero
 
+#hecho con chatgpt aparecian muy mal los numeros
 def mostrar_tablero(tablero_visible):
     print("    ", end="")
     for i in range(20):
