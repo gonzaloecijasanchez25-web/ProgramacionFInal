@@ -1,0 +1,3 @@
+1A;Gonzalo;Ecija;68
+2A;Ariadna;Vinuesa;22
+44;Edward;Elric;77

@@ -7,11 +7,11 @@ def juego():
     turno = 1
     while True:
         mostrar_tablero(t)
-        if modo == "1" or (modo == "2" and turno == 1):
-            t = turno_jugador(t, turno)
+        if modo=="1" or (modo=="2" and turno==1):
+            t = turno_jugador(t,turno)
         else:
             t = turno_cpu(t)
-        if comprobar_victoria(t, turno):
+        if comprobar_victoria(t,turno):
             mostrar_tablero(t)
             print(f"¡Jugador {turno} gana!")
             break
@@ -19,6 +19,6 @@ def juego():
             mostrar_tablero(t)
             print("Empate")
             break
-        turno = 2 if turno == 1 else 1
+        turno = 2 if turno==1 else 1
 
-    juego()
+juego()
